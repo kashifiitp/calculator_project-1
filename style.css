@@ -1,0 +1,94 @@
+     :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+        }
+
+        .calculator {
+            width: 320px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(145deg, #ffffff, #f0f4f8);
+        }
+
+        .display {
+            height: 120px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .button {
+            transition: all 0.2s ease;
+            font-weight: 500;
+            border-radius: 12px;
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .operator {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .operator:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .equals {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .equals:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 10;
+        }
+
+        .history-panel {
+            transition: all 0.3s ease;
+            transform: translateX(100%);
+            width: 300px;
+        }
+
+        .history-panel.active {
+            transform: translateX(0);
+        }
+
+        .dark-mode {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .dark-mode .calculator {
+            background: linear-gradient(145deg, #334155, #1e293b);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode .display {
+            color: white;
+            background-color: #1e293b;
+        }
+
+        .dark-mode .button {
+            background-color: #334155;
+            color: white;
+        }
+
+        .dark-mode .number:hover {
+            background-color: #475569;
+        }
+
+        .dark-mode .history-panel {
+            background-color: #1e293b;
+            color: white;
+        }

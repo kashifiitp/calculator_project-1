@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Advanced Scientific Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
-<body>
-    <h1></h1>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
+    <button class="theme-toggle bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+    </button>
+
+    <div class="calculator relative">
+        <div class="display p-4 bg-white flex flex-col justify-end items-end dark:bg-slate-800">
+            <div id="previous-operand" class="text-gray-500 text-lg h-6 dark:text-gray-400"></div>
+            <div id="current-operand" class="text-3xl font-semibold overflow-x-auto whitespace-nowrap"></div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-2 p-4">
+            <button class="button function col-span-2 bg-red-400 text-white hover:bg-red-500">AC</button>
+            <button class="button function hover:bg-gray-200 dark:hover:bg-slate-600">DEL</button>
+            <button class="button operator">÷</button>
+
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">7</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">8</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">9</button>
+            <button class="button operator">×</button>
+
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">4</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">5</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">6</button>
+            <button class="button operator">-</button>
+
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">1</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">2</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">3</button>
+            <button class="button operator">+</button>
+
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">0</button>
+            <button class="button number hover:bg-gray-200 dark:hover:bg-slate-600">.</button>
+            <button class="button equals col-span-2">=</button>
+        </div>
+
+        <button id="history-btn" class="absolute left-4 top-4 bg-blue-100 text-blue-600 rounded-full p-2 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="history-panel fixed right-0 top-0 h-full bg-white shadow-lg p-4 overflow-y-auto dark:bg-slate-800">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Calculation History</h2>
+            <button id="close-history" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div id="history-list" class="space-y-2"></div>
+        <button id="clear-history" class="mt-4 w-full py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Clear History</button>
+    </div>
+
+    <script src="app.js">
+    
+    </script>
 </body>
 </html>
