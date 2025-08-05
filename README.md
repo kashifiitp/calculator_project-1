@@ -4,7 +4,7 @@
 
 # Description
 
-> This is a fully functional web-based calculator. It features a clean, user-friendly interface for performing basic arithmetic operations such as addition, subtraction, multiplication, and division. The front-end is built with HTML, CSS, and JavaScript, while the back-end logic for handling calculations is powered by Java.
+> This is a fully functional web-based calculator. It features a clean, user-friendly interface for performing basic arithmetic operations such as addition, subtraction, multiplication, and division. The front-end is built with HTML,   CSS, and JavaScript, while the back-end logic for handling calculations is powered by Java.
 > 
 # Features
 Use a bulleted list to highlight the main features of your calculator.

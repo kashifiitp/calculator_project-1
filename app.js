@@ -180,7 +180,7 @@
         });
 
         allClearButton.addEventListener('click', () => {
-            calculator.clear();
+            calculator.clear( );
         });
 
         deleteButton.addEventListener('click', () => {

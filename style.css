@@ -11,7 +11,7 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             overflow: hidden;
-            background: linear-gradient(145deg, #ffffff, #f0f4f8);
+            background: linear-gradient(145deg, #ffffff, #f0f4f8  );
         }
 
         .display {
